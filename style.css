@@ -1,20 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
-:root{
-    --font-size:18px;    
-    --font-family: 'Poppins', sans-serif;
-    --font-weight-normal-x:500;
-    --font-weight-bold:700;
-    --Almost-White: hsl(0, 0%, 98%);
-    --Medium-Gray: hsl(0, 0%, 41%);
-    --Almost-Black: hsl(0, 0%, 8%);
-    --Mobile: 375px;
-    --Desktop: 1440px;
-
-
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap");
+:root {
+  --font-size: 18px;
+  --font-family: "Epilogue", sans-serif;
+  --font-weight-normal-x: 500;
+  --font-weight-bold: 700;
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+  --Mobile: 375px;
+  --Desktop: 1440px;
 }
-
+/*body*/
+body {
+  font-family: var(--font-family);
+  background-color: var(--Almost-White);
+}
 /*give style to main header of the page*/
-.main-header{
-    display: flex;
-    
+.main-header {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  justify-content: center;
+  align-content:center ;
+}
+.main-header-nav-ul {
+  display: flex;
+}
+.main-header-nav {
+  flex: 2;
+}
+.main-header-nav-ul > li {
+  padding: 0 1rem;
+  font-weight: var(--font-weight-normal-x);
+  
+}
+.break {
+  margin-left: auto;
+}
+.main-header-img {
+  margin-right: 2rem;
+}
+.main-header-img > img {
+  max-width: 100%;
+}
+.main-header-nav-ul > li:nth-child(1)::after {
+  content: url(images/icon-arrow-up.svg);
+  margin-left: 6px;
+  padding-bottom: 4px;
+}
+.main-header-nav-ul > li:nth-child(2)::after {
+  content: url(images/icon-arrow-up.svg);
+  margin-left: 6px;
+  padding-bottom: 4px;
+}
+.main-header-nav-ul > li > a {
+  transition: 0.2s ease;
+  font-weight: var(--font-weight-bold);
+  color: var(--Medium-Gray);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.main-header-nav-ul > li > a:hover {
+  color: var(--Almost-Black);
+  border-color: var(--Almost-Black) !important;
+}
+.main-header-nav-ul>li:last-child>a{
+    padding: .5rem 1rem;
+    border: 2px solid var(--Medium-Gray);
+    border-radius: 10px;
 }

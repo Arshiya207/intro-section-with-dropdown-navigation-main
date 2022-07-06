@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+:root{
+    --font-size:18px;    
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-normal-x:500;
+    --font-weight-bold:700;
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+    --Mobile: 375px;
+    --Desktop: 1440px;
+
+
+}
+
+/*give style to main header of the page*/
+.main-header{
+    display: flex;
+    
+}

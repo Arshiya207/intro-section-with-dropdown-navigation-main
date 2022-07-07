@@ -69,7 +69,7 @@ body {
   border: 2px solid var(--Medium-Gray);
   border-radius: 10px;
 }
-/*build dropdowns*/
+/*build dropdowns 1*/
 .drop-down-menu {
   position: absolute;
   padding: 1rem;
@@ -132,6 +132,18 @@ margin-right:10px ;
 }
 .main-header-nav-ul > li.active > a {
   color: var(--Almost-Black);
+} 
+/**drop down menu 2*/
+.drop-down-menu-2{
+  width: 100%;
+  padding: .5rem;
+}
+.drop-down-menu-2>li{
+  margin: 1rem;
+  white-space: nowrap;
+  
+
+
 }
 
 

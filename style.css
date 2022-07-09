@@ -43,16 +43,26 @@ body {
 .main-header-img > img {
   max-width: 100%;
 }
-.main-header-nav-ul > li:nth-child(1)::after {
+/* .main-header-nav-ul > li:nth-child(1)>a::after {
   content: url(images/icon-arrow-up.svg);
-  margin-left: 6px;
-  padding-bottom: 4px;
-}
-.main-header-nav-ul > li:nth-child(2)::after {
+  
+   padding-bottom: 2px; 
+  position: absolute;
+  right: 0;
+  top: 50%; 
+  transform: translateY(-50%);
+
+
+} */
+/* .main-header-nav-ul > li:nth-child(2)>a::after {
   content: url(images/icon-arrow-up.svg);
-  margin-left: 6px;
-  padding-bottom: 4px;
-}
+  
+   padding-bottom: 2px; 
+  position: absolute;
+  right: 0;
+  top: 50%; 
+  transform: translateY(-50%);
+} */
 .main-header-nav-ul > li > a {
   transition: 0.2s ease;
   font-weight: var(--font-weight-bold);
@@ -78,7 +88,7 @@ body {
   width: 120%;
   border-radius: 15px;
   right: 15px;
-  transition: all 0.2s linear;
+  transition: opacity 0.2s linear,transform 0.2s linear;
   z-index: 100;
   opacity: 0;
   transform: translateY(-10px);
@@ -125,7 +135,7 @@ height: 100%;
 margin-right:10px ;
 
 }
-.main-header-nav-ul > li.active > a + ul {
+.main-header-nav-ul > li.active > a ~ ul {
   transform: translateY(20px);
   opacity: 1;
   pointer-events: auto;
@@ -245,7 +255,7 @@ flex: 1;
 
 }
 
-@media(max-width:375px){
+/* @media(max-width:375px){
   .main{
     flex-direction: column;
     min-height: 100vh;
@@ -306,7 +316,7 @@ flex: 1;
     }
 
 }
-
+ */
 
 
 
@@ -337,6 +347,7 @@ flex: 1;
     padding-top: min(30vh,4rem);
     padding-left:1.2rem ;
     z-index: 1000;
+    align-items: flex-start;
   }
   .main-header-nav-ul>li{
       padding: 0.7rem 0;
@@ -350,15 +361,42 @@ flex: 1;
     margin: 0;
 
   }
-  .main-header-nav-ul > li:nth-child(1)::after {
-    content: url(images/icon-arrow-up.svg);
-    margin-left: 8px;
-    padding-bottom: 4px;
+
+
+.drop-down-menu{
+  padding: 0 0 0 2rem;
+  opacity: 1;
+  position: relative;
+  background-color: none;
+  box-shadow: none;
+  transform: translateY(0);
+
+
+
+
+
+
+}
+.drop-down-menu>li{
+ margin: 1rem 0;
+
+
+
+
+
+
+}
+
+  .main-header-nav-ul > li:nth-child(1) {
+    
+  
+    padding-right: 1rem;
+   
   }
-  .main-header-nav-ul > li:nth-child(2)::after {
-    content: url(images/icon-arrow-up.svg);
-    margin-left: 8px;
-    padding-bottom: 4px;
+  .main-header-nav-ul > li:nth-child(2) {
+
+    padding-right: 1rem;
+   
   }
   .main-header-nav-ul > li:last-child {
     align-self: stretch;
@@ -376,9 +414,6 @@ flex: 1;
 
 
  
-}
-@media(max-width:787px){
-
 }
 
 
